@@ -1,0 +1,9 @@
+/*<dtml-with bika_traceanalytics>*/
+<dtml-call "REQUEST.set('portal_url', portal_url())">
+*/
+
+body {
+
+}
+
+/* </dtml-with> */
