@@ -1,0 +1,13 @@
+Install bika.traceanalytics addon using buildout
+---------------------------------
+
+You need to tell Plone to use "bika.traceanalytics" addon. To do this, edit buildout.cfg:
+
+* Add "bika.traceanalytics" to the "eggs=" section.
+* Add "src/bika.traceanalytics" to the "develop=" section.
+
+Now, run "bin/buildout" again.  If this completes without errors, you should be able to install the new add-on in Plone.
+
+* If you already have a Plone site, you can browse to site-setup->addons, and activate the addon.
+
+* If you are creating a new Plone site, you should select "Bika LIMS" and also select the add-on, before clicking the "Add Plone Site" button.
