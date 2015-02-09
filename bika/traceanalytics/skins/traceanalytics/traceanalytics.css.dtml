@@ -1,4 +1,4 @@
-/*<dtml-with bika_traceanalytics>*/
+/*<dtml-with traceanalytics>*/
 <dtml-call "REQUEST.set('portal_url', portal_url())">
 */
 

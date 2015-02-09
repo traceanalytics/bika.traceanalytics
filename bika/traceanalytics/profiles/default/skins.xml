@@ -6,12 +6,12 @@
         default_skin="Sunburst Theme"
         request_varname="plone_skin">
 
-  <object name="bika_traceanalytics"
+  <object name="ytraceanalytics"
           meta_type="Filesystem Directory View"
-          directory="bika.traceanalytics:skins/bika_traceanalytics"/>
+          directory="bika.traceanalytics:skins/traceanalytics"/>
 
   <skin-path name="*">
-    <layer name="bika_traceanalytics" insert-after="custom"/>
+    <layer name="traceanalytics" insert-after="custom"/>
   </skin-path>
 
 </object>

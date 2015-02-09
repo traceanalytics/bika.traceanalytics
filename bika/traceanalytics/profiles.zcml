@@ -10,13 +10,4 @@
       description='Extension profile for Trace Analytics'
       provides="Products.GenericSetup.interfaces.EXTENSION"/>
 
-  <genericsetup:importStep
-      name="setuptraceanalyticsVarious"
-      title="Trace Analytics: Various"
-      description="Final site configuration actions"
-      handler="bika.traceanalytics.setuphandlers.setuptraceanalyticsVarious">
-    <depends name="content" />
-    <depends name="toolset" />
-  </genericsetup:importStep>
-
 </configure>

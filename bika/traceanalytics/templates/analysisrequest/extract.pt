@@ -1,0 +1,27 @@
+<tal:report tal:define="analysisrequest python:view.getAnalysisRequest();
+                        client          analysisrequest/client;
+                        contact         analysisrequest/contact;
+                        laboratory      analysisrequest/laboratory;
+                        portal          analysisrequest/portal;
+                        sample          analysisrequest/sample;
+                        batch           analysisrequest/batch;
+                        analyses        analysisrequest/analyses;
+                        qcanalyses      analysisrequest/qcanalyses;
+                        specifications  analysisrequest/specifications;
+                        reporter        analysisrequest/reporter;
+                        pointsofcapture analysisrequest/points_of_capture;
+                        categories      analysisrequest/categories;
+                        categanalyses   analysisrequest/categorized_analyses;
+                        categqcanalyses analysisrequest/categorized_qcanalyses;
+                        hasqcanalyses   python:len(qcanalyses) &gt; 0;
+                        reportdrymatter analysisrequest/report_drymatter;
+                        hasprevresults  analysisrequest/haspreviousresults;
+                        showqcanalyses  python:view.isQCAnalysesVisible();
+                        remarksenabled  python:view.context.bika_setup.getEnableAnalysisRemarks();">
+
+<!-- Report header -->
+<div id="section-header">
+    <h1>Trace Analytics Extract Edible Report</h1>
+    <p>Under construction</p>
+</div>
+</tal:report>
