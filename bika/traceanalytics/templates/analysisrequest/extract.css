@@ -47,6 +47,10 @@ h2 {
     margin:10px 0 20px;
 }
 
+div.page-header {
+    margin-bottom:20px;
+}
+
 div.section-header {
     padding-bottom:15px;
     border-bottom:1px solid #333;
@@ -135,6 +139,33 @@ div.section-detailed-cannabinoid div.footnote {
 }
 div.section-detailed-cannabinoid div.footnote p {
     margin:4px 0;
+}
+div.section-detailed-microbial p {
+    line-height:140%;
+}
+div.section-detailed-microbial table {
+    border:1px solid #81A92F;
+    width:100%;
+    font-size:1.1em;
+    margin-top:30px;
+    margin-bottom:40px;
+}
+div.section-detailed-microbial table thead th {
+    background-color: #81A92F;
+    border-bottom:none;
+    color:#fff;
+    padding:10px;
+    font-size:1.3em;
+}
+div.section-detailed-microbial table tbody td {
+    padding:7px;
+    border-bottom:1px solid #81A92F;
+    border-left:1px solid #81A92F;
+    text-align:center;
+}
+div.section-detailed-microbial table tbody td:first-child {
+    border-left:none;
+    text-align:left;
 }
 div.page-footer {
     border-top: 1px solid #cdcdcd;

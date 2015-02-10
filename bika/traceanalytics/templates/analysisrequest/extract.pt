@@ -175,6 +175,7 @@
     <div class="page-number">Page 1</div>
 </div>
 <div class="page-break"></div>
+
 <!-- header -->
 <div class="page-header">
 <div class="section-header clearfix">
@@ -221,6 +222,72 @@
 </div>
 
 <div class="section-detailed-microbial">
+    <h2>Microbial assessment</h2>
+    <p>
+        Microbial assessment was performed using a combination of qPCR and 3M Petrifilm asessment. See table below for measurements and WA State I-502 Standards criteria.
+    </p>
+    <table cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Microbe tested/methodology</th>
+                <th>Trace Analytics results</th>
+                <th>WSLCB Pass criteria</th>
+                <th>Within Limits?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Total viable aerobic bacteria/3M Petrifilm</td>
+                <td class="todo">10<sup>4</sup> CFU/g</td>
+                <td class="todo">10<sup>5</sup> CFU/g</td>
+                <td class="todo">Yes</td>
+            </tr>
+            <tr>
+                <td>Total Yeast and Mold/3M Petrifilm</td>
+                <td class="todo">10<sup>3</sup> CFU/g</td>
+                <td class="todo">10<sup>4</sup> CFU/g</td>
+                <td class="todo">Yes</td>
+            </tr>
+            <tr>
+                <td>Total Coliforms/3M Petrifilm</td>
+                <td class="todo">10<sup>3</sup> CFU/g</td>
+                <td class="todo">10<sup>3</sup> CFU/g</td>
+                <td class="todo">Yes</td>
+            </tr>
+            <tr>
+                <td>Bile-tolerant gram-negative bacteria/3M Petrifilm</td>
+                <td class="todo">10<sup>2</sup> CFU/g</td>
+                <td class="todo">10<sup>3</sup> CFU/g</td>
+                <td class="todo">Yes</td>
+            </tr>
+            <tr>
+                <td>E.coli, pathogenic strins/qPCR</td>
+                <td class="todo">Not detected</td>
+                <td class="todo">Not detected in 1g</td>
+                <td class="todo">Yes</td>
+            </tr>
+            <tr>
+                <td>Salmonella spp./qPCR</td>
+                <td class="todo">Not detected</td>
+                <td class="todo">Not detected in 1g</td>
+                <td class="todo">Yes</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="free-comments">
+        <p class="todo">
+            Etiam id leo lacus. Donec volutpat eros eget dolor sollicitudin, eu pellentesque tellus malesuada. Aenean vitae odio vitae diam pretium scelerisque vel a metus. Proin blandit ex id bibendum pharetra. Nam et tempor quam. Praesent vehicula urna mi, ac finibus neque rutrum vitae. Nam at ante ac lorem porta mollis ac ac libero. Aenean pellentesque condimentum sem, non fermentum tellus facilisis non. Fusce pretium pretium lacus, nec dapibus tellus interdum nec. Fusce cursus gravida orci. Integer eros libero, rutrum eget aliquet a, tristique id nulla. Etiam a posuere nisi. Aenean in eleifend nisl, eget pharetra dolor. Praesent pretium neque eget velit facilisis vulputate.
+        </p>
+    </div>
 </div>
+
+<!-- footer --->
+<div class="page-footer">
+    <span class='bold label' i18n:translate="">Unique ID:</span><span tal:content="analysisrequest/client_sampleid"></span>/
+    <a tal:content="analysisrequest/id" tal:attributes="href analysisrequest/url;"></a>
+    <div class="page-number">Page 2</div>
+</div>
+<div class="page-break"></div>
+
 
 </tal:report>
