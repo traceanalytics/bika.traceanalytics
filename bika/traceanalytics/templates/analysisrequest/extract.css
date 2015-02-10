@@ -140,7 +140,8 @@ div.section-detailed-cannabinoid div.footnote {
 div.section-detailed-cannabinoid div.footnote p {
     margin:4px 0;
 }
-div.section-detailed-microbial p {
+div.section-detailed-microbial p,
+div.section-detailed-terpene p {
     line-height:140%;
 }
 div.section-detailed-microbial table {
@@ -166,6 +167,31 @@ div.section-detailed-microbial table tbody td {
 div.section-detailed-microbial table tbody td:first-child {
     border-left:none;
     text-align:left;
+}
+div.section-detailed-terpene table {
+    text-align:center;
+    width:70%;
+    margin-left:13%;
+    font-size:1.1em;
+}
+div.section-detailed-terpene table {
+    border:1px solid #000;
+    margin-top:30px;
+    margin-bottom:40px;
+}
+div.section-detailed-terpene table thead th {
+    background-color:#DAEFAF;
+    font-size:1.3em;
+    padding:10px;
+}
+div.section-detailed-terpene table tbody td {
+    padding:2px;
+    font-size:1.2em;
+    border-left:1px dotted #000;
+    border-top:1px dotted #000;
+}
+div.section-detailed-terpene table tbody td:first-child {
+    border-left:none;
 }
 div.page-footer {
     border-top: 1px solid #cdcdcd;
