@@ -19,7 +19,8 @@
                         showqcanalyses  python:view.isQCAnalysesVisible();
                         remarksenabled  python:view.context.bika_setup.getEnableAnalysisRemarks();">
 
-<!-- Report header -->
+<!-- Header -->
+<div class="page-header">
 <div class="section-header clearfix">
     <div class="lab-logo">
         <a tal:attributes="href laboratory/url">
@@ -36,8 +37,8 @@
         </p>
         <p>
             <span class='bold label' i18n:translate="">Lab ID:</span>
-             <a tal:content="analysisrequest/id"
-                tal:attributes="href analysisrequest/url;"></a>
+            <a tal:content="analysisrequest/id"
+               tal:attributes="href analysisrequest/url;"></a>
         </p>
     </div>
     <div class="col2">
@@ -61,6 +62,9 @@
         </p>
     </div>
 </div>
+</div>
+
+<!-- Body -->
 <div class="section-summary cols2 clearfix">
     <h1 i18n:translate="">Analysis Summary</h1>
     <div class="col1">
@@ -163,4 +167,60 @@
         </p>
     </div>
 </div>
+
+<!-- footer --->
+<div class="page-footer">
+    <span class='bold label' i18n:translate="">Unique ID:</span><span tal:content="analysisrequest/client_sampleid"></span>/
+    <a tal:content="analysisrequest/id" tal:attributes="href analysisrequest/url;"></a>
+    <div class="page-number">Page 1</div>
+</div>
+<div class="page-break"></div>
+<!-- header -->
+<div class="page-header">
+<div class="section-header clearfix">
+    <div class="lab-logo">
+        <a tal:attributes="href laboratory/url">
+            <img tal:attributes="src laboratory/logo"/>
+        </a>
+    </div>
+    <div class="lab-address" tal:content="structure laboratory/address"></div>
+</div>
+<div class="section-subheader cols3 clearfix">
+    <div class="col1">
+        <p>
+            <span class='bold label' i18n:translate="">Unique ID:</span>
+            <span tal:content="analysisrequest/client_sampleid"></span>
+        </p>
+        <p>
+            <span class='bold label' i18n:translate="">Lab ID:</span>
+            <a tal:content="analysisrequest/id"
+               tal:attributes="href analysisrequest/url;"></a>
+        </p>
+    </div>
+    <div class="col2">
+        <p>
+            <span class='bold label' i18n:translate="">Specimen Type:</span>
+            <span tal:content="sample/sample_type/title|nothing"></span>
+        </p>
+        <p>
+            <span class='bold label' i18n:translate="">Client:</span>
+            <span tal:content="client/name"></span>
+        </p>
+    </div>
+    <div class="col3">
+        <p>
+            <span class='bold label' i18n:translate="">Date Received:</span>
+            <span tal:content="analysisrequest/date_received"></span>
+        </p>
+        <p>
+            <span class='bold label' i18n:translate="">Date of Report:</span>
+            <span tal:content="analysisrequest/date_published"></span>
+        </p>
+    </div>
+</div>
+</div>
+
+<div class="section-detailed-microbial">
+</div>
+
 </tal:report>

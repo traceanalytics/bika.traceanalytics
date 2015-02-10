@@ -2,9 +2,11 @@
     font-family: Arial;
     font-size:12px;
 }
-
 body {
-    width: 170mm;
+    width: 180mm;
+    padding: 10px 10px 0px 20px;
+    margin: 10px auto;
+    background-color:#fff;
 }
 .clearfix:after {
     visibility: hidden;
@@ -134,6 +136,14 @@ div.section-detailed-cannabinoid div.footnote {
 div.section-detailed-cannabinoid div.footnote p {
     margin:4px 0;
 }
+div.page-footer {
+    border-top: 1px solid #cdcdcd;
+    font-size: 0.8em;
+    margin-top: 40px;
+    padding-top: 15px;
+    text-align: right;
+    bottom:0;
+}
 
 @media print {
     * {
@@ -142,5 +152,15 @@ div.section-detailed-cannabinoid div.footnote p {
     a {
         text-decoration:none;
         color:#000;
+    }
+    body {
+        font: serif;
+        font-size:10pt;
+        max-width:7.6in;
+        margin:0;
+    }
+    @page {
+        size: auto;
+        margin: 0.5in 0.3in 1in 0.4in;
     }
 }
