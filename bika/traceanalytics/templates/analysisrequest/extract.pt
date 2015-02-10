@@ -61,4 +61,41 @@
         </p>
     </div>
 </div>
+<div class="section-summary cols2 clearfix">
+    <h1 i18n:translate="">Analysis Summary</h1>
+    <div class="col1">
+        <table>
+            <tbody>
+                <tr>
+                    <th>Total Cannabinoid Content</th>
+                    <td class="todo">17.8%</td>
+                </tr>
+                <tr>
+                    <th>&Delta;9-THC Potency</th>
+                    <td class="todo">15.3%</td>
+                </tr>
+                <tr>
+                    <th>CBD Potency</th>
+                    <td class="todo">0.2%</td>
+                </tr>
+                <tr>
+                    <th>Microbial Contamination</th>
+                    <td class="todo">Within Limits</td>
+                </tr>
+                <tr>
+                    <th>Residual Solvents</th>
+                    <td class="todo">Within Limits</td>
+                </tr>
+                <tr>
+                    <th>Terpenes</th>
+                    <td>See detailed report</td>
+                </tr>
+            </tbody>
+            <th></th>
+        </table>
+    </div>
+    <div class="col2 picture">
+        <img src='' class="todo"/>
+    </div>
+</div>
 </tal:report>

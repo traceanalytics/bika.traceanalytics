@@ -20,6 +20,19 @@ body {
 .label {
     padding-right:10px;
 }
+.todo:after {
+    color:red;
+    content:" TODO ";
+    font-size:0.5em;
+    margin:0 5px;
+    padding:2px;
+    background-color:yellow;
+}
+h1 {
+    font-size:1.9em;
+    font-weight:normal;
+    margin:15px 0;
+}
 
 div.section-header {
     padding-bottom:15px;
@@ -43,6 +56,38 @@ div.cols3 div.col2,
 div.cols3 div.col3 {
     float:left;
     width:33%;
+}
+
+div.cols2 div.col1,
+div.cols2 div.col2 {
+    float:left;
+    width:50%;
+}
+
+div.section-summary {
+    padding-bottom:15px;
+    border-bottom:1px solid #333;
+}
+div.section-summary table {
+    width:100%;
+}
+div.section-summary table th,
+div.section-summary table td {
+    font-size: 1.2em;
+    font-weight: normal;
+    padding: 10px 0;
+    text-align: left;
+}
+div.section-summary table td {
+    text-align:right;
+}
+div.section-summary div.picture {
+    text-align:center;
+}
+div.section-summary div.picture img {
+    width:85%;
+    height: 230px;
+    border:1px solid #cdcdcd;
 }
 
 @media print {
