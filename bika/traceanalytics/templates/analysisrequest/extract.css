@@ -6,6 +6,44 @@
 body {
     width: 170mm;
 }
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.bold {
+    font-weight:bold;
+}
+.label {
+    padding-right:10px;
+}
+
+div.section-header {
+    padding-bottom:15px;
+    border-bottom:1px solid #333;
+}
+div.section-header div.lab-logo {
+    float:left;
+}
+div.section-header div.lab-address {
+    float:right;
+}
+div.section-header div.lab-logo img {
+    width: 260px;
+}
+
+div.section-subheader {
+    border-bottom:1px solid #333;
+}
+div.cols3 div.col1,
+div.cols3 div.col2,
+div.cols3 div.col3 {
+    float:left;
+    width:33%;
+}
 
 @media print {
     * {
