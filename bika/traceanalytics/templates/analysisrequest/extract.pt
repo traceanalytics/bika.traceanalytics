@@ -95,7 +95,72 @@
         </table>
     </div>
     <div class="col2 picture">
-        <img src='' class="todo"/>
+        <img src=''/>
+    </div>
+</div>
+<div class="section-detailed-cannabinoid">
+    <h1 i18n:translate="">Detailed report</h1>
+    <h2 i18n:translate="">Cannabinoid Content/Potency</h2>
+    <div class="cols2 clearfix">
+        <div class="col1 picture">
+            <img src='' class="todo"/>
+        </div>
+        <div class="col2">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cannabinoid</th>
+                        <th>Concentration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class='first'>CBD-A</td>
+                        <td class='todo'>0.1%</td>
+                    </tr>
+                    <tr>
+                        <td class='first'>&Delta;9-THC-A</td>
+                        <td class='todo'>16.5%</td>
+                    </tr>
+                    <tr>
+                        <td class='first'>CBD</td>
+                        <td class='todo'>0.1%</td>
+                    </tr>
+                    <tr>
+                        <td class='first'>CBG</td>
+                        <td class='todo'>0.3%</td>
+                    </tr>
+                    <tr>
+                        <td class='first'>CBN</td>
+                        <td class='todo'>&lt;0.1%</td>
+                    </tr>
+                    <tr>
+                        <td class='first'>&Delta;9-THC</td>
+                        <td class='todo'>0.8%</td>
+                    </tr>
+                    <tr>
+                        <td class='first'>&Delta;8-THC</td>
+                        <td class='todo'>&lt;0.1%</td>
+                    </tr>
+                    <tr>
+                        <td class='first'>CBC</td>
+                        <td class='todo'>&lt;0.1%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class='footnote'>
+        <p class='italic'>Potency conversion<sup>*</sup>:</p>
+        <p class='todo'>
+            &Delta;-THC potency = [&Delta;9-THC-A] &cdot; 0.8777 + [&Delta;9-THC] = 16.5% x 0.877 + 0.8% = 15.3%
+        </p>
+        <p class='todo'>
+            CBD Potency = [CBD-A] x 0.8777 + [CBD] = 0.1% x 0.8777 + 0.1% = 0.2%
+        </p>
+        <p class="smaller italic">
+            * Gieringer, D and Hazenkamp, A. 2011, Autumn. How accurate is potency testing? O'Shanghnessy's, 17-18.
+        </p>
     </div>
 </div>
 </tal:report>

@@ -20,6 +20,12 @@ body {
 .label {
     padding-right:10px;
 }
+.italic {
+    font-style:italic;
+}
+.smaller {
+    font-size:0.9em;
+}
 .todo:after {
     color:red;
     content:" TODO ";
@@ -32,6 +38,11 @@ h1 {
     font-size:1.9em;
     font-weight:normal;
     margin:15px 0;
+}
+h2 {
+    font-size:1.5em;
+    font-weight:normal;
+    margin:10px 0 20px;
 }
 
 div.section-header {
@@ -88,6 +99,40 @@ div.section-summary div.picture img {
     width:85%;
     height: 230px;
     border:1px solid #cdcdcd;
+}
+
+div.section-detailed-cannabinoid div.picture {
+    text-align:center;
+    vertical-align:middle;
+}
+div.section-detailed-cannabinoid div.picture img {
+    width:100%;
+    height: 200px;
+    border:1px solid #cdcdcd;
+}
+div.section-detailed-cannabinoid div.col2 table {
+    border:1px solid #000;
+    margin-left: 30px;
+    width: 85%;
+}
+div.section-detailed-cannabinoid div.col2 table thead th {
+    background-color: #DAEFAF;
+    border-bottom:none;
+}
+div.section-detailed-cannabinoid div.col2 table tbody td {
+    border-top:1px dotted #000;
+    border-left:1px dotted #000;
+    padding:5px;
+    text-align:center;
+}
+div.section-detailed-cannabinoid div.col2 table tbody td.first {
+    border-left:none;
+}
+div.section-detailed-cannabinoid div.footnote {
+    font-size:0.9em;
+}
+div.section-detailed-cannabinoid div.footnote p {
+    margin:4px 0;
 }
 
 @media print {
