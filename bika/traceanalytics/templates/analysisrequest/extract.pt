@@ -76,7 +76,11 @@
         <table>
             <tbody>
                 <tr tal:repeat="analysis cansumanalyses">
-                    <td class='first' tal:content="analysis/keyword">CBD-A</td>
+                    <td class='first'
+                        tal:define="keyword analysis/keyword;
+                                    keyword python:keyword.replace('d8','&Delta;8');
+                                    keyword python:keyword.replace('d9','&Delta;9');"
+                        tal:content="structure keyword">CBD-A</td>
                     <td>
                         <span tal:content="structure analysis/formatted_result"></span>
                         <span tal:content="structure analysis/formatted_unit"></span>
@@ -126,7 +130,11 @@
                 </thead>
                 <tbody>
                     <tr tal:repeat="analysis candetanalyses">
-                        <td class='first' tal:content="analysis/keyword">CBD-A</td>
+                        <td class='first'
+                            tal:define="keyword analysis/keyword;
+                                        keyword python:keyword.replace('d8','&Delta;8');
+                                        keyword python:keyword.replace('d9','&Delta;9');"
+                            tal:content="structure keyword">CBD-A</td>
                         <td>
                             <span tal:content="structure analysis/formatted_result"></span>
                             <span tal:content="structure analysis/formatted_unit"></span>
