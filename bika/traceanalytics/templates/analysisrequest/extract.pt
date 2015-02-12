@@ -102,6 +102,10 @@
         <img src=''/>
     </div>
 </div>
+<tal:detailed_cannabinoid
+    define="labanalyses python:categanalyses.get('Lab Analyses',{});
+            cananalyses python:labanalyses.get('Cannabinoid Potency',[]);"
+    condition="cananalyses">
 <div class="section-detailed-cannabinoid">
     <h1 i18n:translate="">Detailed report</h1>
     <h2 i18n:translate="">Cannabinoid Content/Potency</h2>
@@ -118,37 +122,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class='first'>CBD-A</td>
-                        <td class='todo'>0.1%</td>
-                    </tr>
-                    <tr>
-                        <td class='first'>&Delta;9-THC-A</td>
-                        <td class='todo'>16.5%</td>
-                    </tr>
-                    <tr>
-                        <td class='first'>CBD</td>
-                        <td class='todo'>0.1%</td>
-                    </tr>
-                    <tr>
-                        <td class='first'>CBG</td>
-                        <td class='todo'>0.3%</td>
-                    </tr>
-                    <tr>
-                        <td class='first'>CBN</td>
-                        <td class='todo'>&lt;0.1%</td>
-                    </tr>
-                    <tr>
-                        <td class='first'>&Delta;9-THC</td>
-                        <td class='todo'>0.8%</td>
-                    </tr>
-                    <tr>
-                        <td class='first'>&Delta;8-THC</td>
-                        <td class='todo'>&lt;0.1%</td>
-                    </tr>
-                    <tr>
-                        <td class='first'>CBC</td>
-                        <td class='todo'>&lt;0.1%</td>
+                    <tr tal:repeat="analysis cananalyses">
+                        <td class='first' tal:content="analysis/keyword">CBD-A</td>
+                        <td>
+                            <span tal:content="structure analysis/formatted_result"></span>
+                            <span tal:content="structure analysis/formatted_unit"></span>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -157,7 +136,7 @@
     <div class='footnote'>
         <p class='italic'>Potency conversion<sup>*</sup>:</p>
         <p class='todo'>
-            &Delta;-THC potency = [&Delta;9-THC-A] &cdot; 0.8777 + [&Delta;9-THC] = 16.5% x 0.877 + 0.8% = 15.3%
+            &Delta;-THC potency = [&Delta;9-THC-A] x 0.8777 + [&Delta;9-THC] = <span tal:content="16.5% x 0.877 + 0.8% = 15.3%
         </p>
         <p class='todo'>
             CBD Potency = [CBD-A] x 0.8777 + [CBD] = 0.1% x 0.8777 + 0.1% = 0.2%
@@ -167,6 +146,7 @@
         </p>
     </div>
 </div>
+</tal:detailed_cannabinoid>
 
 <!-- footer --->
 <div class="page-footer">
