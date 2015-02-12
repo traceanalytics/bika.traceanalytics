@@ -23,7 +23,7 @@
                         cananalyses python:labanalyses.get('Cannabinoid Potency',[]);
                         cansumanalyses python:[an for an in cananalyses if an.get('keyword') in summarykeys];
                         candetanalyses python:[an for an in cananalyses if an.get('keyword') not in summarykeys];
-                        microanalyses python:categanalyses.get('',{});">
+                        microanalyses python:labanalyses.get('Microbial Assessment via qPCR',[]);">
 
 <!-- Header -->
 <div class="page-header">
@@ -76,10 +76,15 @@
     <div class="col1">
         <table>
             <tbody>
-                <tr tal:repeat="analysis cansumanalyses">
+                <tr tal:condition="cansumanalyses"
+                    tal:repeat="analysis cansumanalyses">
                     <th tal:define="title analysis/title;
                                     title python:title.replace('d8','&Delta;8');
-                                    title python:title.replace('d9','&Delta;9');"
+                                    title python:title.replace('d9','&Delta;9');
+                                    title python:title.replace('Delta-8','&Delta;8');
+                                    title python:title.replace('Delta-9','&Delta;9');
+                                    title python:title.replace('Delta 8','&Delta;8');
+                                    title python:title.replace('Delta 9','&Delta;9');"
                         tal:content="structure title">CBD-A</th>
                     <td>
                         <span tal:content="structure analysis/formatted_result"></span>
@@ -92,9 +97,14 @@
                         <span tal:replace="structure python: ','.join(summarykeys)"></span>
                     </td>
                 </tr>
-                <tr>
+                <tr tal:condition="microanalyses">
                     <th>Microbial Contamination</th>
-                    <td class="todo">Within Limits</td>
+                    <tal:microcontamination
+                        define="outofrange python:[ma for ma in microanalyses if ma.get('outofrange',False)];
+                                outofrange python:outofrange">
+                    <td tal:condition="outofrange" class='outofrange'>Outside limits</td>
+                    <td tal:condition="python: not outofrange">Within Limits</td>
+                    </tal:microcontamination>
                 </tr>
                 <tr>
                     <th>Residual Solvents</th>
@@ -157,7 +167,6 @@
         </p>
     </div-->
 </div>
-</tal:detailed_cannabinoid>
 
 <!-- footer --->
 <div class="page-footer">
@@ -211,7 +220,8 @@
     </div>
 </div>
 </div>
-
+</tal:detailed_cannabinoid>
+<tal:detailed_micro condition="microanalyses">
 <div class="section-detailed-microbial">
     <h2>Microbial assessment</h2>
     <p>
@@ -227,48 +237,25 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Total viable aerobic bacteria/3M Petrifilm</td>
-                <td class="todo">10<sup>4</sup> CFU/g</td>
-                <td class="todo">10<sup>5</sup> CFU/g</td>
-                <td class="todo">Yes</td>
-            </tr>
-            <tr>
-                <td>Total Yeast and Mold/3M Petrifilm</td>
-                <td class="todo">10<sup>3</sup> CFU/g</td>
-                <td class="todo">10<sup>4</sup> CFU/g</td>
-                <td class="todo">Yes</td>
-            </tr>
-            <tr>
-                <td>Total Coliforms/3M Petrifilm</td>
-                <td class="todo">10<sup>3</sup> CFU/g</td>
-                <td class="todo">10<sup>3</sup> CFU/g</td>
-                <td class="todo">Yes</td>
-            </tr>
-            <tr>
-                <td>Bile-tolerant gram-negative bacteria/3M Petrifilm</td>
-                <td class="todo">10<sup>2</sup> CFU/g</td>
-                <td class="todo">10<sup>3</sup> CFU/g</td>
-                <td class="todo">Yes</td>
-            </tr>
-            <tr>
-                <td>E.coli, pathogenic strins/qPCR</td>
-                <td class="todo">Not detected</td>
-                <td class="todo">Not detected in 1g</td>
-                <td class="todo">Yes</td>
-            </tr>
-            <tr>
-                <td>Salmonella spp./qPCR</td>
-                <td class="todo">Not detected</td>
-                <td class="todo">Not detected in 1g</td>
-                <td class="todo">Yes</td>
+            <tr tal:repeat="analysis microanalyses">
+                <td tal:content="analysis/title">Total viable aerobic bacteria/3M Petrifilm</td>
+                <td>
+                    <span tal:content="structure analysis/formatted_result"></span>
+                    <span tal:content="structure analysis/formatted_unit"></span>
+                </td>
+                <td>
+                    <span tal:content="structure analysis/specs/max"></span>
+                    <span tal:content="structure analysis/formatted_unit"></span>
+                </td>
+                <td tal:condition="analysis/outofrange" class='outofrange'>No</td>
+                <td tal:condition="python: not analysis.get('outofrange')">Yes</td>
             </tr>
         </tbody>
     </table>
     <div class="free-comments">
-        <p class="todo">
+        <!--p class="todo">
             Etiam id leo lacus. Donec volutpat eros eget dolor sollicitudin, eu pellentesque tellus malesuada. Aenean vitae odio vitae diam pretium scelerisque vel a metus. Proin blandit ex id bibendum pharetra. Nam et tempor quam. Praesent vehicula urna mi, ac finibus neque rutrum vitae. Nam at ante ac lorem porta mollis ac ac libero. Aenean pellentesque condimentum sem, non fermentum tellus facilisis non. Fusce pretium pretium lacus, nec dapibus tellus interdum nec. Fusce cursus gravida orci. Integer eros libero, rutrum eget aliquet a, tristique id nulla. Etiam a posuere nisi. Aenean in eleifend nisl, eget pharetra dolor. Praesent pretium neque eget velit facilisis vulputate.
-        </p>
+        </p-->
     </div>
 </div>
 
@@ -324,6 +311,7 @@
     </div>
 </div>
 </div>
+</tal:detailed_micro>
 <div class="section-detailed-terpene">
     <h2>Terpene Profile</h2>
     <p>
