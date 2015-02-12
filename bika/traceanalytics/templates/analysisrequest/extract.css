@@ -188,31 +188,40 @@ div.section-detailed-microbial table tbody td:first-child {
     border-left:none;
     text-align:left;
 }
+div.section-detailed-residual table,
 div.section-detailed-terpene table {
     text-align:center;
     width:70%;
     margin-left:13%;
     font-size:1.1em;
-}
-div.section-detailed-terpene table {
     border:1px solid #000;
     margin-top:30px;
     margin-bottom:40px;
 }
+div.section-detailed-residual table thead th,
 div.section-detailed-terpene table thead th {
     background-color:#DAEFAF;
     font-size:1.3em;
     padding:10px;
 }
+div.section-detailed-residual table tbody td,
 div.section-detailed-terpene table tbody td {
     padding:2px;
     font-size:1.2em;
     border-left:1px dotted #000;
     border-top:1px dotted #000;
 }
+div.section-detailed-residual table tbody td:first-child,
 div.section-detailed-terpene table tbody td:first-child {
     border-left:none;
 }
+div.section-detailed-residual table tfoot td {
+    padding:10px;
+    font-size:1.1em;
+    font-weight:bold;
+    border-top:1px dotted #000;
+}
+
 div.page-footer {
     border-top: 1px solid #cdcdcd;
     font-size: 0.8em;
