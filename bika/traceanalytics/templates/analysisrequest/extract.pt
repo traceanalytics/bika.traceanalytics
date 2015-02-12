@@ -22,7 +22,8 @@
                         labanalyses python:categanalyses.get('Lab Analyses',{});
                         cananalyses python:labanalyses.get('Cannabinoid Potency',[]);
                         cansumanalyses python:[an for an in cananalyses if an.get('keyword') in summarykeys];
-                        candetanalyses python:[an for an in cananalyses if an.get('keyword') not in summarykeys];">
+                        candetanalyses python:[an for an in cananalyses if an.get('keyword') not in summarykeys];
+                        microanalyses python:categanalyses.get('',{});">
 
 <!-- Header -->
 <div class="page-header">
@@ -76,11 +77,10 @@
         <table>
             <tbody>
                 <tr tal:repeat="analysis cansumanalyses">
-                    <td class='first'
-                        tal:define="keyword analysis/keyword;
-                                    keyword python:keyword.replace('d8','&Delta;8');
-                                    keyword python:keyword.replace('d9','&Delta;9');"
-                        tal:content="structure keyword">CBD-A</td>
+                    <th tal:define="title analysis/title;
+                                    title python:title.replace('d8','&Delta;8');
+                                    title python:title.replace('d9','&Delta;9');"
+                        tal:content="structure title">CBD-A</th>
                     <td>
                         <span tal:content="structure analysis/formatted_result"></span>
                         <span tal:content="structure analysis/formatted_unit"></span>
