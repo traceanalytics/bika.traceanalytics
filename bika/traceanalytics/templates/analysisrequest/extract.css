@@ -36,6 +36,12 @@ body {
     padding:2px;
     background-color:yellow;
 }
+.warning {
+    color:red;
+    background-color:yellow;
+    font-weight:bold;
+    padding:5px;
+}
 h1 {
     font-size:1.9em;
     font-weight:normal;
@@ -97,6 +103,13 @@ div.section-summary table td {
 }
 div.section-summary table td {
     text-align:right;
+}
+div.section-summary table td.warning {
+    text-align:left;
+    line-height:140%;
+    font-weight:bold;
+    font-size:0.9em;
+    padding:10px;
 }
 div.section-summary div.picture {
     text-align:center;
@@ -219,5 +232,8 @@ div.page-footer {
     @page {
         size: auto;
         margin: 0.5in 0.3in 1in 0.4in;
+    }
+    .warning {
+        display:none;
     }
 }
