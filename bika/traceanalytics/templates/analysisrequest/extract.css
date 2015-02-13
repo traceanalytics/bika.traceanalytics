@@ -130,6 +130,7 @@ div.section-summary div.picture img {
 div.section-detailed-cannabinoid div.picture {
     text-align:center;
     vertical-align:middle;
+    width:50%;
 }
 div.section-detailed-cannabinoid div.picture img {
     width:100%;
@@ -251,5 +252,8 @@ div.page-footer {
     }
     .warning {
         display:none;
+    }
+    div.page-break {
+        page-break-after: always
     }
 }
