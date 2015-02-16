@@ -1,0 +1,259 @@
+* {
+    font-family: Arial;
+    font-size:12px;
+}
+body {
+    width: 180mm;
+    padding: 10px 10px 0px 20px;
+    margin: 10px auto;
+    background-color:#fff;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.bold {
+    font-weight:bold;
+}
+.label {
+    padding-right:10px;
+}
+.italic {
+    font-style:italic;
+}
+.smaller {
+    font-size:0.9em;
+}
+.todo:after {
+    color:red;
+    content:" TODO ";
+    font-size:0.5em;
+    margin:0 5px;
+    padding:2px;
+    background-color:yellow;
+}
+.warning {
+    color:red;
+    background-color:yellow;
+    font-weight:bold;
+    padding:5px;
+}
+.outofrange {
+    color:red;
+    font-weight:bold;
+}
+h1 {
+    font-size:1.9em;
+    font-weight:normal;
+    margin:15px 0;
+}
+h2 {
+    font-size:1.5em;
+    font-weight:normal;
+    margin:10px 0 20px;
+}
+
+div.page-header {
+    margin-bottom:20px;
+}
+
+div.section-header {
+    padding-bottom:15px;
+    border-bottom:1px solid #333;
+}
+div.section-header div.lab-logo {
+    float:left;
+}
+div.section-header div.lab-address {
+    float:right;
+}
+div.section-header div.lab-logo img {
+    width: 260px;
+}
+
+div.section-subheader {
+    border-bottom:1px solid #333;
+}
+div.cols3 div.col1,
+div.cols3 div.col2,
+div.cols3 div.col3 {
+    float:left;
+    width:33%;
+}
+
+div.cols2 div.col1,
+div.cols2 div.col2 {
+    float:left;
+    width:50%;
+}
+
+div.section-summary {
+    padding-bottom:15px;
+    border-bottom:1px solid #333;
+}
+div.section-summary table {
+    width:100%;
+}
+div.section-summary table th,
+div.section-summary table td {
+    font-size: 1.2em;
+    font-weight: normal;
+    padding: 10px 0;
+    text-align: left;
+}
+div.section-summary table td {
+    text-align:right;
+}
+div.section-summary table td.warning {
+    text-align:left;
+    line-height:140%;
+    font-weight:bold;
+    font-size:0.9em;
+    padding:10px;
+}
+div.section-summary table td.outofrange {
+    font-weight:bold;
+}
+div.section-summary div.picture {
+    text-align:center;
+}
+div.section-summary div.picture img {
+    width:85%;
+    height: 230px;
+    border:1px solid #cdcdcd;
+}
+
+div.section-detailed-cannabinoid div.picture {
+    text-align:center;
+    vertical-align:middle;
+    width:50%;
+}
+div.section-detailed-cannabinoid div.picture img {
+    width:100%;
+    height: 200px;
+    border:1px solid #cdcdcd;
+}
+div.section-detailed-cannabinoid div.col2 table {
+    border:1px solid #000;
+    margin-left: 30px;
+    width: 85%;
+}
+div.section-detailed-cannabinoid div.col2 table thead th {
+    background-color: #DAEFAF;
+    border-bottom:none;
+}
+div.section-detailed-cannabinoid div.col2 table tbody td {
+    border-top:1px dotted #000;
+    border-left:1px dotted #000;
+    padding:5px;
+    text-align:center;
+}
+div.section-detailed-cannabinoid div.col2 table tbody td.first {
+    border-left:none;
+}
+div.section-detailed-cannabinoid div.footnote {
+    font-size:0.9em;
+}
+div.section-detailed-cannabinoid div.footnote p {
+    margin:4px 0;
+}
+div.section-detailed-microbial p,
+div.section-detailed-terpene p {
+    line-height:140%;
+}
+div.section-detailed-microbial table {
+    border:1px solid #81A92F;
+    width:100%;
+    font-size:1.1em;
+    margin-top:30px;
+    margin-bottom:40px;
+}
+div.section-detailed-microbial table thead th {
+    background-color: #81A92F;
+    border-bottom:none;
+    color:#fff;
+    padding:10px;
+    font-size:1.3em;
+}
+div.section-detailed-microbial table tbody td {
+    padding:7px;
+    border-bottom:1px solid #81A92F;
+    border-left:1px solid #81A92F;
+    text-align:center;
+}
+div.section-detailed-microbial table tbody td:first-child {
+    border-left:none;
+    text-align:left;
+}
+div.section-detailed-residual table,
+div.section-detailed-terpene table {
+    text-align:center;
+    width:70%;
+    margin-left:13%;
+    font-size:1.1em;
+    border:1px solid #000;
+    margin-top:30px;
+    margin-bottom:40px;
+}
+div.section-detailed-residual table thead th,
+div.section-detailed-terpene table thead th {
+    background-color:#DAEFAF;
+    font-size:1.3em;
+    padding:10px;
+}
+div.section-detailed-residual table tbody td,
+div.section-detailed-terpene table tbody td {
+    padding:2px;
+    font-size:1.2em;
+    border-left:1px dotted #000;
+    border-top:1px dotted #000;
+}
+div.section-detailed-residual table tbody td:first-child,
+div.section-detailed-terpene table tbody td:first-child {
+    border-left:none;
+}
+div.section-detailed-residual table tfoot td {
+    padding:10px;
+    font-size:1.1em;
+    font-weight:bold;
+    border-top:1px dotted #000;
+}
+
+div.page-footer {
+    border-top: 1px solid #cdcdcd;
+    font-size: 0.8em;
+    margin-top: 40px;
+    padding-top: 15px;
+    text-align: right;
+    bottom:0;
+}
+
+@media print {
+    * {
+        font: 9pt Arial, Verdana, serif;
+    }
+    a {
+        text-decoration:none;
+        color:#000;
+    }
+    body {
+        font: serif;
+        font-size:10pt;
+        max-width:7.6in;
+        margin:0;
+    }
+    @page {
+        size: auto;
+        margin: 0.5in 0.3in 1in 0.4in;
+    }
+    .warning {
+        display:none;
+    }
+    div.page-break {
+        page-break-after: always
+    }
+}
