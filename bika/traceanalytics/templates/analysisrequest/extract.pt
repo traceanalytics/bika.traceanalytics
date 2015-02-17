@@ -16,7 +16,8 @@
                         residualanalyses python:labanalyses.get('Residual Solvents', []);
                         ressumanalyses python:[ra for ra in residualanalyses if ra.get('keyword') in residkeys];
                         residualanalyses python:[ra for ra in residualanalyses if ra.get('keyword') not in residkeys];
-                        terpanalyses python:labanalyses.get('Terpenes',[]);">
+                        terpanalyses python:labanalyses.get('Terpenes',[]);
+                        global page_count python:0;">
 
 <!-- Header and footer -->
 <tal:header_footer condition="python: False">
@@ -66,10 +67,10 @@
 </div>
 </metal:page_header>
 <metal:page_footer define-macro="page_footer">
-<div class="page-footer">
+<div class="page-footer" tal:define="global page_count python:page_count+1">
     <span class='bold label' i18n:translate="">Unique ID:</span><span tal:content="analysisrequest/client_sampleid"></span>/
     <a tal:content="analysisrequest/id" tal:attributes="href analysisrequest/url;"></a>
-    <div class="page-number">Page 2</div>
+    <div class="page-number">Page <span tal:content="python:page_count"></span></div>
 </div>
 <div class="page-break"></div>
 </metal:page_footer>
