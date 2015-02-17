@@ -135,8 +135,20 @@
             <th></th>
         </table>
     </div>
-    <div class="col2 picture">
-        <img src=''/>
+    <div class="col2 picture" tal:define="ar_attachments python:(analysisrequest['obj'].getAttachment() and len(analysisrequest['obj'].getAttachment())>0) and analysisrequest['obj'].getAttachment() or None" >
+        <div tal:condition="ar_attachments">
+            <span tal:define="global analysis_summary_image_found python:False;"></span>
+            <tal:attachment tal:repeat="attachment ar_attachments">
+                <div tal:define="file python:attachment.getAttachmentFile();
+                                    attachment_type python:attachment.getAttachmentType().Title() if attachment.getAttachmentType() else '';
+                                    ">
+                    <div tal:condition="python:(not analysis_summary_image_found and (attachment_type == 'REPORTIMAGE'))" >
+                        <img style="max-width: 291px;max-height: 232px;" tal:attributes="src string:${attachment/absolute_url}/at_download/AttachmentFile" />
+                        <span tal:define="global analysis_summary_image_found python:True;"></span>
+                    </div>
+                </div>
+            </tal:attachment>
+        </div>
     </div>
 </div>
 
