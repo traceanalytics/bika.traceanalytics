@@ -166,7 +166,7 @@
                             tal:content="structure keyword">CBD-A</td>
                         <td>
                             <span tal:content="structure analysis/formatted_result"></span>
-                            <span tal:content="structure analysis/formatted_unit"></span>
+                            <span tal:content="string:%"></span>
                         </td>
                     </tr>
                 </tbody>
