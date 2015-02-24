@@ -147,8 +147,22 @@
     <h1 i18n:translate="">Detailed report</h1>
     <h2 i18n:translate="">Cannabinoid Content/Potency</h2>
     <div class="cols2 clearfix">
-        <div class="col1 picture">
-            <img src='' class="todo"/>
+        <div class="col2 picture" tal:define="ar_attachments python:(analysisrequest['obj'].getAttachment() and len(analysisrequest['obj'].getAttachment())>0) and analysisrequest['obj'].getAttachment() or None" >
+            <div tal:condition="ar_attachments">
+                <span tal:define="global analysis_summary_image_found python:False;"></span>
+                <tal:attachment tal:repeat="attachment ar_attachments">
+                    <div tal:define="file python:attachment.getAttachmentFile();
+                                        attachment_type python:attachment.getAttachmentType().Title() if attachment.getAttachmentType() else '';
+                                        ">
+                        <div tal:condition="python:(not analysis_summary_image_found and (attachment_type == 'REPORTIMAGE'))" >
+                            <img style="width: 291px;height: 232px;"
+                                type="image/jpeg"
+                                tal:attributes="src python:view.renderImage(attachment)" />
+                            <span tal:define="global analysis_summary_image_found python:True;"></span>
+                        </div>
+                    </div>
+                </tal:attachment>
+            </div>
         </div>
         <div class="col2">
             <table>
